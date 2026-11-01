@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görev Listesi - DOM ve Olaylar</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
+    form { display: flex; gap: 0.5rem; }
+    input[type="text"] { flex: 1; padding: 0.5rem; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0; border-bottom: 1px solid #ddd; }
+    li span { flex: 1; cursor: pointer; }
+    li.tamamlandi span { text-decoration: line-through; color: #888; }
+    #sayac { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Görev Listesi</h1>
+
+  <form id="gorev-formu">
+    <input type="text" id="gorev-girdisi" placeholder="Yeni görev yazın" required autocomplete="off">
+    <button type="submit">Ekle</button>
+  </form>
+
+  <p id="sayac"></p>
+  <ul id="gorev-listesi"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Örnek kurs kataloğu - HTML, CSS ve JavaScript projesi">
+  <title>Kurs Kataloğu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="ust">
+    <div class="kapsayici">
+      <h1>Kurs Kataloğu</h1>
+      <p>Örnek verilerle hazırlanmış, arama ve filtreleme yapabilen demo site.</p>
+    </div>
+  </header>
+
+  <main class="kapsayici">
+    <!-- Arama, kategori ve sıralama kontrolleri -->
+    <form class="kontroller" role="search" onsubmit="return false">
+      <div>
+        <label for="arama">Ara</label>
+        <input type="search" id="arama" placeholder="Kurs adı veya açıklama">
+      </div>
+      <div>
+        <label for="kategori">Kategori</label>
+        <select id="kategori">
+          <option value="">Tümü</option>
+        </select>
+      </div>
+      <div>
+        <label for="siralama">Sırala</label>
+        <select id="siralama">
+          <option value="ad">Ada göre (A-Z)</option>
+          <option value="sure-artan">Süre (kısadan uzuna)</option>
+          <option value="sure-azalan">Süre (uzundan kısaya)</option>
+        </select>
+      </div>
+    </form>
+
+    <p id="sonuc-bilgisi" role="status" aria-live="polite"></p>
+    <section id="kurs-listesi" class="izgara" aria-label="Kurs listesi"></section>
+  </main>
+
+  <footer class="alt">
+    <div class="kapsayici">
+      <p>Eğitim amaçlı örnek proje &middot; <a href="https://iakademi.com">iakademi.com</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

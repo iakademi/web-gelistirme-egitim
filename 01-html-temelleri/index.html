@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!-- Karakter kodlaması: Türkçe karakterlerin doğru görünmesi için UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Mobil cihazlarda doğru ölçekleme -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML temellerini gösteren örnek sayfa">
+  <title>HTML Temelleri</title>
+</head>
+<body>
+  <!-- Sayfa üst bölümü ve gezinme menüsü -->
+  <header>
+    <h1>HTML Temelleri</h1>
+    <nav aria-label="Sayfa içi menü">
+      <ul>
+        <li><a href="#listeler">Listeler</a></li>
+        <li><a href="#tablo">Tablo</a></li>
+        <li><a href="#form">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="giris">
+      <h2>Giriş</h2>
+      <p>
+        HTML, web sayfalarının <strong>yapısını</strong> tanımlayan işaretleme dilidir.
+        Metin vurgulamak için <em>em</em>, önemli ifadeler için <strong>strong</strong> kullanılır.
+      </p>
+      <p>
+        Dış bağlantı örneği:
+        <a href="https://developer.mozilla.org/tr/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN HTML Belgeleri</a>
+      </p>
+      <!-- Görsel eklerken alt özniteliği erişilebilirlik için zorunludur -->
+      <figure>
+        <svg width="120" height="60" role="img" aria-label="Mavi dikdörtgen örneği">
+          <rect width="120" height="60" fill="#2563eb"></rect>
+        </svg>
+        <figcaption>Satır içi SVG ile çizilmiş basit bir şekil</figcaption>
+      </figure>
+    </section>
+
+    <section id="listeler">
+      <h2>Listeler</h2>
+      <h3>Sırasız liste</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <h3>Sıralı liste</h3>
+      <ol>
+        <li>Sayfa iskeletini yaz</li>
+        <li>Stillendir</li>
+        <li>Etkileşim ekle</li>
+      </ol>
+    </section>
+
+    <section id="tablo">
+      <h2>Tablo</h2>
+      <table border="1" cellpadding="6">
+        <caption>Örnek haftalık çalışma planı</caption>
+        <thead>
+          <tr><th scope="col">Gün</th><th scope="col">Konu</th><th scope="col">Süre (saat)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Pazartesi</td><td>HTML</td><td>2</td></tr>
+          <tr><td>Çarşamba</td><td>CSS</td><td>2</td></tr>
+          <tr><td>Cuma</td><td>JavaScript</td><td>3</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row" colspan="2">Toplam</th><td>7</td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Form</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="ad">Ad Soyad</label><br>
+          <input type="text" id="ad" name="ad" required minlength="3" placeholder="Adınız Soyadınız">
+        </p>
+        <p>
+          <label for="eposta">E-posta</label><br>
+          <input type="email" id="eposta" name="eposta" required>
+        </p>
+        <p>
+          <label for="seviye">Seviye</label><br>
+          <select id="seviye" name="seviye">
+            <option value="baslangic">Başlangıç</option>
+            <option value="orta">Orta</option>
+            <option value="ileri">İleri</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>İlgi alanları</legend>
+          <label><input type="checkbox" name="ilgi" value="web"> Web</label>
+          <label><input type="checkbox" name="ilgi" value="veri"> Veri</label>
+        </fieldset>
+        <p>
+          <label for="mesaj">Mesaj</label><br>
+          <textarea id="mesaj" name="mesaj" rows="4" cols="40"></textarea>
+        </p>
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 İ-Akademi - Eğitim amaçlı örnek sayfa</p>
+  </footer>
+</body>
+</html>

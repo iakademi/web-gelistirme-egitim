@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "ad": "Excel ile Veri Analizi",
+    "kategori": "Office",
+    "seviye": "Orta",
+    "sureSaat": 16,
+    "aciklama": "Formüller, pivot tablolar ve grafiklerle veri analizi örnekleri."
+  },
+  {
+    "id": 2,
+    "ad": "Excel VBA ile Otomasyon",
+    "kategori": "Office",
+    "seviye": "İleri",
+    "sureSaat": 24,
+    "aciklama": "Makro kaydı, VBA kod yazımı ve raporlama otomasyonu."
+  },
+  {
+    "id": 3,
+    "ad": "Power BI ile Raporlama",
+    "kategori": "Power Platform",
+    "seviye": "Orta",
+    "sureSaat": 24,
+    "aciklama": "Veri modelleme, DAX ölçüleri ve etkileşimli pano tasarımı."
+  },
+  {
+    "id": 4,
+    "ad": "Power Automate ile İş Akışları",
+    "kategori": "Power Platform",
+    "seviye": "Başlangıç",
+    "sureSaat": 16,
+    "aciklama": "Bulut akışları, onay süreçleri ve bildirim otomasyonu."
+  },
+  {
+    "id": 5,
+    "ad": "Ağ Temelleri",
+    "kategori": "Ağ",
+    "seviye": "Başlangıç",
+    "sureSaat": 32,
+    "aciklama": "IP adresleme, yönlendirme ve anahtarlama temel kavramları."
+  },
+  {
+    "id": 6,
+    "ad": "Siber Güvenliğe Giriş",
+    "kategori": "Güvenlik",
+    "seviye": "Başlangıç",
+    "sureSaat": 20,
+    "aciklama": "Temel tehdit türleri, parola güvenliği ve koruma yöntemleri."
+  },
+  {
+    "id": 7,
+    "ad": "JavaScript ile Web Geliştirme",
+    "kategori": "Yazılım",
+    "seviye": "Orta",
+    "sureSaat": 40,
+    "aciklama": "Dil temelleri, DOM işlemleri ve fetch ile veri alma."
+  },
+  {
+    "id": 8,
+    "ad": "Python Programlamaya Giriş",
+    "kategori": "Yazılım",
+    "seviye": "Başlangıç",
+    "sureSaat": 32,
+    "aciklama": "Değişkenler, döngüler, fonksiyonlar ve dosya işlemleri."
+  },
+  {
+    "id": 9,
+    "ad": "Scrum ile Çevik Proje Yönetimi",
+    "kategori": "Proje Yönetimi",
+    "seviye": "Başlangıç",
+    "sureSaat": 16,
+    "aciklama": "Scrum rolleri, olayları ve artefaktları."
+  },
+  {
+    "id": 10,
+    "ad": "Proje Yönetimi Temelleri",
+    "kategori": "Proje Yönetimi",
+    "seviye": "Orta",
+    "sureSaat": 24,
+    "aciklama": "Kapsam, zaman, maliyet ve risk yönetimi kavramları."
+  }
+]

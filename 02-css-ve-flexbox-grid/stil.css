@@ -1,0 +1,125 @@
+/* ==========================================================
+   Ortak stil dosyası - Flexbox ve Grid örnekleri
+   ========================================================== */
+
+/* Renk ve ölçü değişkenleri */
+:root {
+  --ana-renk: #1d4ed8;
+  --koyu: #0f172a;
+  --acik-gri: #f1f5f9;
+  --kenarlik: #cbd5e1;
+  --bosluk: 1rem;
+  --yaricap: 8px;
+}
+
+/* Kutu modelini herkes için border-box yap: padding genişliğe dahil olur */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--koyu);
+  background: #ffffff;
+}
+
+h1, h2 { margin: 0 0 var(--bosluk); }
+
+.kapsayici {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--bosluk);
+}
+
+/* ---------- Flexbox ---------- */
+
+/* Gezinme çubuğu: logo solda, bağlantılar sağda */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* ana eksende boşluğu dağıt */
+  align-items: center;            /* çapraz eksende ortala */
+  padding: 0.75rem var(--bosluk);
+  background: var(--koyu);
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+  gap: var(--bosluk);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a { color: #fff; text-decoration: none; }
+.navbar a:hover { text-decoration: underline; }
+
+/* Kartlar sığmazsa alt satıra geçsin */
+.kart-sirasi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bosluk);
+}
+
+.kart-sirasi .kart {
+  flex: 1 1 200px; /* büyüyebilir, küçülebilir, taban genişlik 200px */
+}
+
+/* ---------- Ortak kart ---------- */
+.kart {
+  background: var(--acik-gri);
+  border: 1px solid var(--kenarlik);
+  border-radius: var(--yaricap);
+  padding: var(--bosluk);
+}
+
+.kart h3 { margin-top: 0; color: var(--ana-renk); }
+
+/* ---------- Grid ---------- */
+
+/* Duyarlı ızgara: sütun sayısı genişliğe göre otomatik belirlenir */
+.kart-izgarasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--bosluk);
+}
+
+/* Klasik sayfa yerleşimi: üst, yan menü, içerik, alt */
+.sayfa-yerlesimi {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "ust  ust"
+    "yan  icerik"
+    "alt  alt";
+  gap: var(--bosluk);
+}
+
+.sayfa-yerlesimi > header { grid-area: ust; }
+.sayfa-yerlesimi > aside  { grid-area: yan; }
+.sayfa-yerlesimi > main   { grid-area: icerik; }
+.sayfa-yerlesimi > footer { grid-area: alt; }
+
+.sayfa-yerlesimi > * {
+  background: var(--acik-gri);
+  border: 1px solid var(--kenarlik);
+  border-radius: var(--yaricap);
+  padding: var(--bosluk);
+}
+
+/* ---------- Duyarlı tasarım ---------- */
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; gap: 0.5rem; }
+  .sayfa-yerlesimi {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ust"
+      "icerik"
+      "yan"
+      "alt";
+  }
+}

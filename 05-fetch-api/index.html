@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API Örneği</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    button { margin-right: 0.5rem; padding: 0.5rem 0.9rem; }
+    #durum { margin: 1rem 0; font-weight: 600; }
+    #durum.hata { color: #b91c1c; }
+    li { margin-bottom: 0.5rem; }
+    pre { background: #f1f5f9; padding: 0.75rem; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Fetch API</h1>
+  <div>
+    <button id="btn-liste">Gönderileri Listele</button>
+    <button id="btn-gonder">Yeni Gönderi Yolla (POST)</button>
+  </div>
+  <p id="durum" role="status"></p>
+  <ul id="sonuc-listesi"></ul>
+  <pre id="sonuc-json" hidden></pre>
+
+  <script src="fetch-ornek.js"></script>
+</body>
+</html>
